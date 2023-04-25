@@ -29,6 +29,19 @@ const router = new VueRouter({
   },
 });
 
+// check logged in user
+
+router.beforeEach(function (to, from, next) {
+  console.log('beforeEach', to.path + ' - Auth: ' + localStorage.usertoken)
+  if ((to.path !== '/login' && to.path !== 'login') && !localStorage.usertoken) {
+    next({ path: '/login' })
+  } else if ((to.path === '/login' || to.path === 'login') && localStorage.usertoken) {
+    next({ path: '/' })
+  } else {
+    next()
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: "#app",

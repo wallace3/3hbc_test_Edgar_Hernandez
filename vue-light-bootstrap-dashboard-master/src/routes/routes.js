@@ -20,6 +20,8 @@ import AddAirline from 'src/pages/AddAirline.vue'
 import EditAirline from 'src/pages/EditAirline.vue'
 import AddFlight from 'src/pages/AddFlight.vue'
 import EditFlight from 'src/pages/EditFlight.vue'
+import Login from 'src/pages/Login.vue'
+
 
 const routes = [
   {
@@ -111,8 +113,13 @@ const routes = [
         path: 'edit-flight',
         name: 'EditFlight',
         component: EditFlight
-      }
+      },
     ]
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   { path: '*', component: NotFound }
 ]

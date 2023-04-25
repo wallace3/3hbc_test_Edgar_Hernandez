@@ -55,7 +55,7 @@
             <a class="dropdown-item" href="#">Separated link</a>
           </base-dropdown>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" @click="logout" class="nav-link">
               Log out
             </a>
           </li>
@@ -92,6 +92,11 @@
       },
       hideSidebar () {
         this.$sidebar.displaySidebar(false)
+      },
+      logout(){
+        console.log("si entra");
+        localStorage.removeItem('usertoken');
+        this.$router.push('/login')
       }
     }
   }
