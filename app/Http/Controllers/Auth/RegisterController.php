@@ -1,7 +1,7 @@
 
 <?php
 
-use App\Role;
+use App\Models\Role;
 class RegisterController extends Controller{
     protected function create(array $data){   
 

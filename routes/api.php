@@ -50,4 +50,8 @@ Route::get('flights/tracking', 'App\Http\Controllers\FlightsController@getFlight
 
 /* ROUTES OF USERS */
 
+Route::post('/auth/register', 'App\Http\Controllers\Auth\AuthController@createUser');
+Route::post('/auth/login', 'App\Http\Controllers\Auth\AuthController@loginUser');
+
+
 /* END ROUTES OF USERS */ 

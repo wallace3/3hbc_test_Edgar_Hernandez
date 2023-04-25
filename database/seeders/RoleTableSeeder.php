@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Role;
+use App\Models\Role;
+
 
 class RoleTableSeeder extends Seeder
 {
@@ -20,6 +21,6 @@ class RoleTableSeeder extends Seeder
         $role_operations = new Role();        
         $role_operations->name = 'operations';        
         $role_operations->description = 'A operations User';        
-        $role_manager->save();  
+        $role_operations->save();  
     }
 }

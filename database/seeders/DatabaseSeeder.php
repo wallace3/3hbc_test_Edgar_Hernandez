@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Role;
+use App\Models\Role;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
